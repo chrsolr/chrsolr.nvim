@@ -256,6 +256,9 @@ vim.o.termguicolors = true
 -- Format with Eslint
 vim.api.nvim_set_keymap('n', '<leader>-ff', ':EslintFixAll<CR>', { noremap = true, silent = true })
 
+-- open/close neotree
+vim.api.nvim_set_keymap('n', '<leader>-b', ':Neotree<CR>', { noremap = true, silent = true })
+
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
