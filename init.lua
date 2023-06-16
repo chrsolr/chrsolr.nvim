@@ -253,6 +253,8 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- [[ Basic Keymaps ]]
+-- Format with Eslint
+vim.api.nvim_set_keymap('n', '<leader>-ff', ':EslintFixAll<CR>', { noremap = true, silent = true })
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
