@@ -205,14 +205,33 @@ require('lazy').setup({
   { import = 'custom.plugins' },
 }, {})
 
--- [[ Setting options ]]
--- See `:help vim.o`
--- NOTE: You can change these options as you wish!
 
+-- [[ Personal Setting options ]]
 -- Personal Changes
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
+vim.o.swapfile = false
+
+-- [[ Personal Remaps]]
+-- Navigation
+vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '}', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '{', { noremap = true })
+
+
+-- Format with Eslint
+vim.api.nvim_set_keymap('n', '<leader>-ff', ':EslintFixAll<CR>', { noremap = true, silent = true })
+
+
+-- open/close neotree
+vim.api.nvim_set_keymap('n', '<leader>-b', ':Neotree<CR>', { noremap = true, silent = true })
+
+
+-- [[ Setting options ]]
+-- See `:help vim.o`
+-- NOTE: You can change these options as you wish!
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -253,11 +272,7 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- [[ Basic Keymaps ]]
--- Format with Eslint
-vim.api.nvim_set_keymap('n', '<leader>-ff', ':EslintFixAll<CR>', { noremap = true, silent = true })
 
--- open/close neotree
-vim.api.nvim_set_keymap('n', '<leader>-b', ':Neotree<CR>', { noremap = true, silent = true })
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -282,7 +297,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
   defaults = {
-    file_ignore_patterns = { 'node_modules', },
+    file_ignore_patterns = { 'node_modules', '.git' },
     mappings = {
       i = {
         ['<C-u>'] = false,
@@ -414,7 +429,7 @@ local on_attach = function(_, bufnr)
 
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+  -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
