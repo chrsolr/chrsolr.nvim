@@ -11,7 +11,8 @@ M.general = {
     ["<S-h>"] = { "<C-w>h", "Window left" },
     ["<S-l>"] = { "<C-w>l", "Window right" },
     ["<leader>|"] = { "<cmd> vsp <CR>", "Vertical Split", opts = { nowait = true } },
-    ["<leader>-"] = { "<cmd> sp <CR>", "Horizantal Split", olpts = { nowait = true } },
+    ["<leader>-"] = { "<cmd> sp <CR>", "Horizantal Split", opts = { nowait = true } },
+    ["<leader>tt"] = { "<cmd> TroubleToggle <CR>", "Trouble Toggle", opts = { nowait = true } }
   },
 
   v = {
