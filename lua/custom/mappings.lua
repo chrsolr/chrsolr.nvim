@@ -1,4 +1,4 @@
----@type MappingsTable
+--@type MappingsTable
 local M = {}
 
 M.general = {
@@ -13,6 +13,10 @@ M.general = {
   v = {
     ["<C-j>"] = { "}", "Scroll down to next blankline ", opts = { nowait = true } },
     ["<C-k>"] = { "{", "Scroll up to next blankline ", opts = { nowait = true } },
+  },
+
+  i = {
+    ["<C-s>"] = { "<ESC><cmd> w <CR>", "Save file" },
   }
 }
 
