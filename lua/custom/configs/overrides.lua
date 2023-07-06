@@ -33,7 +33,7 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
-    "eslint",
+    "eslint-lsp",
     "tailwindcss-language-server",
 
     -- c/cpp stuff
