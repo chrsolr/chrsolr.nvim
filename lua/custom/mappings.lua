@@ -25,6 +25,11 @@ M.general = {
   }
 }
 
+M.telescope = {
+  n = {
+    ["<leader>fr"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
+  }
+}
 -- more keybinds!
 
 return M
