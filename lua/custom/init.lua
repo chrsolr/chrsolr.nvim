@@ -9,3 +9,8 @@ local opt = vim.opt
 
 -- Numbers
 opt.relativenumber = true
+
+-- 
+vim.wo.wrap = false
+vim.wo.linebreak = true
+vim.wo.list = false

@@ -15,7 +15,7 @@ M.general = {
     ["<leader>ct"] = { "<cmd> TroubleToggle <CR>", "Trouble Toggle", opts = { nowait = true} },
     ["<leader>gg"] = { "<cmd> LazyGit <CR>", "Open LazyGit", opts = { nowait = true} },
 
-    ["<leader><C-f>"] = {
+    ["<leader>cf"] = {
       function()
         vim.lsp.buf.format { async = true }
       end,
