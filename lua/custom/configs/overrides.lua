@@ -31,7 +31,6 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
-    "deno",
     "prettier",
     "eslint-lsp",
     "tailwindcss-language-server",
