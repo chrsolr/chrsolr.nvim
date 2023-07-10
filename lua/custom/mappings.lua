@@ -12,7 +12,7 @@ M.general = {
     ["<leader>|"] = { "<cmd> vsp <CR>", "Vertical Split", opts = { nowait = true } },
     ["<leader>-"] = { "<cmd> sp <CR>", "Horizantal Split", opts = { nowait = true } },
 
-    ["<leader>tt"] = { "<cmd> TroubleToggle <CR>", "Trouble Toggle", opts = { nowait = true} },
+    ["<leader>ct"] = { "<cmd> TroubleToggle <CR>", "Trouble Toggle", opts = { nowait = true} },
     ["<leader>gg"] = { "<cmd> LazyGit <CR>", "Open LazyGit", opts = { nowait = true} },
 
     ["<leader><C-f>"] = {
