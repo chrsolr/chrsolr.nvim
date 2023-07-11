@@ -59,7 +59,7 @@ local plugins = {
 
   {
     "kdheepak/lazygit.nvim",
-    lazy = false,
+    event = "VeryLazy",
     -- optional for floating window border decoration
     dependencies = {
       "nvim-lua/plenary.nvim",
