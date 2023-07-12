@@ -18,14 +18,17 @@ M.general = {
     ["<leader>cf"] = {
       function()
         vim.lsp.buf.format { async = true }
+        vim.cmd("EslintFixAll")
       end,
-      "LSP formatting",
+      "LSP & Eslint formatting",
     },
   },
 
   v = {
     ["<C-j>"] = { "}", "Scroll down to next blankline ", opts = { nowait = true } },
     ["<C-k>"] = { "{", "Scroll up to next blankline ", opts = { nowait = true } },
+
+    ["p"] = { '"_dP', opts = { nowait = true } },
   },
 
   i = {

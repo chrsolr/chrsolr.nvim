@@ -32,6 +32,7 @@ M.mason = {
     "html-lsp",
     "typescript-language-server",
     "prettier",
+    "deno",
     "eslint-lsp",
     "tailwindcss-language-server",
 
@@ -51,7 +52,7 @@ M.nvimtree = {
     highlight_git = true,
     icons = {
       show = {
-        git = true,
+        git = false,
       },
     },
   },
