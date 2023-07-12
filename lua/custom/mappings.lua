@@ -27,6 +27,8 @@ M.general = {
   v = {
     ["<C-j>"] = { "}", "Scroll down to next blankline ", opts = { nowait = true } },
     ["<C-k>"] = { "{", "Scroll up to next blankline ", opts = { nowait = true } },
+
+    ["p"] = { '"_dP', opts = { nowait = true } },
   },
 
   i = {
