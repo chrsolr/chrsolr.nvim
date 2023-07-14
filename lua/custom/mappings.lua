@@ -32,12 +32,19 @@ M.general = {
 
     -- Spell
     ["<leader>zg"] = { "zg", "Add word to dictionary", opts = { nowait = true } },
-    ["<leader>z-"] = {
+    ["<leader>zT"] = {
       function()
         vim.opt_local.spell = not(vim.opt_local.spell:get())
-        print("spell: " .. tostring(vim.o.spell))
+        print("spell local: " .. tostring(vim.o.spell))
       end,
-      "Toggle spell check"
+      "Toggle spell check (Local)"
+    },
+    ["<leader>zt"] = {
+      function()
+        vim.opt.spell = not(vim.opt.spell:get())
+        print("spell global: " .. tostring(vim.o.spell))
+      end,
+      "Toggle spell check (Global)"
     },
   },
 
