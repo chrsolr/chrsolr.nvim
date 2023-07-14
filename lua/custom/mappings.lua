@@ -22,6 +22,15 @@ M.general = {
       end,
       "LSP & Eslint formatting",
     },
+
+    ["<leader>z-"] = {
+      function()
+        vim.opt_local.spell = not(vim.opt_local.spell:get())
+        print("spell: " .. tostring(vim.o.spell))
+      end,
+      "Toggle spell check"
+    },
+
   },
 
   v = {
