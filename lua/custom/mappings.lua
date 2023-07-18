@@ -25,7 +25,6 @@ M.general = {
     -- Formats
     ["<leader>cf"] = {
       function()
-        vim.lsp.buf.format { async = true }
         vim.cmd("EslintFixAll")
       end,
       "LSP & Eslint formatting",
