@@ -8,13 +8,21 @@ M.general = {
     -- Motions
     ["<C-d>"] = { "<C-d>zz", "Scroll down and center", opts = { nowait = true } },
     ["<C-u>"] = { "<C-u>zz", "Scroll up and center", opts = { nowait = true } },
-    ["<C-j>"] = { "}", "Scroll down to next blankline ", opts = { nowait = true } },
-    ["<C-k>"] = { "{", "Scroll up to next blankline ", opts = { nowait = true } },
+    ["<C-j>"] = { "}", "Scroll down to next blankline", opts = { nowait = true } },
+    ["<C-k>"] = { "{", "Scroll up to next blankline", opts = { nowait = true } },
+    ["<S-h>"] = { "<cmd> bprevious <CR>", "Previous buffer", opts = { nowait = true } },
+    ["<S-l>"] = { "<cmd> bnext <CR>", "Next buffer", opts = { nowait = true } },
+
+    ["<leader>h"] = { "<C-w>h", "Move to left pane", opts = { nowait = true } },
+    ["<leader>j"] = { "<C-w>j", "Move to below pane", opts = { nowait = true } },
+    ["<leader>k"] = { "<C-w>k", "Move to top pane", opts = { nowait = true } },
+    ["<leader>l"] = { "<C-w>l", "Move to right pane", opts = { nowait = true } },
+    ["<leader>q"] = { "<C-w>q", "Close pane", opts = { nowait = true } },
 
 
     -- Windows
-    ["<leader>|"] = { "<cmd> vsp <CR>", "Vertical Split", opts = { nowait = true } },
-    ["<leader>-"] = { "<cmd> sp <CR>", "Horizantal Split", opts = { nowait = true } },
+    ["<leader>v"] = { "<cmd> vsp <CR>", "Vertical Split", opts = { nowait = true } },
+    ["<leader>s"] = { "<cmd> sp <CR>", "Horizantal Split", opts = { nowait = true } },
 
 
     -- Commands
