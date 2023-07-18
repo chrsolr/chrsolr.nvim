@@ -3,6 +3,8 @@ local M = {}
 
 M.general = {
   n = {
+
+
     -- Motions
     ["<C-d>"] = { "<C-d>zz", "Scroll down and center", opts = { nowait = true } },
     ["<C-u>"] = { "<C-u>zz", "Scroll up and center", opts = { nowait = true } },
