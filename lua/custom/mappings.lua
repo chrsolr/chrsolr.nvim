@@ -72,6 +72,7 @@ M.general = {
 M.telescope = {
   n = {
     ["<leader>fr"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
+    ["<leader>kt"] = { "<cmd> Telescope themes <CR>", "Nvchad themes" },
   }
 }
 -- more keybinds!
