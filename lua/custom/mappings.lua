@@ -4,7 +4,6 @@ local M = {}
 M.general = {
   n = {
 
-
     -- Motions
     ["<C-d>"] = { "<C-d>zz", "Scroll down and center", opts = { nowait = true } },
     ["<C-u>"] = { "<C-u>zz", "Scroll up and center", opts = { nowait = true } },
@@ -23,6 +22,8 @@ M.general = {
     -- Windows
     ["<leader>v"] = { "<cmd> vsp <CR>", "Vertical Split", opts = { nowait = true } },
     ["<leader>s"] = { "<cmd> sp <CR>", "Horizantal Split", opts = { nowait = true } },
+    ["<leader>e"] = { "<cmd> Neotree action=focus <CR>", "Neotree Focus", opts = { nowait = true } },
+    ["<C-n>"] = { "<cmd> Neotree toggle <CR>", "Neotree Toggle", opts = { nowait = true } },
 
 
     -- Commands

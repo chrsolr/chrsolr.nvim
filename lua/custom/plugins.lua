@@ -35,6 +35,7 @@ local plugins = {
 
   {
     "nvim-tree/nvim-tree.lua",
+    enabled = false,
     opts = overrides.nvimtree,
   },
 
@@ -76,6 +77,17 @@ local plugins = {
             -- Configuration here, or leave empty to use defaults
         })
     end,
+  },
+
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
   }
 
   -- To make a plugin not be loaded
