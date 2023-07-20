@@ -18,7 +18,7 @@ M.ui = {
       { "󰈚  Recent Files", "Spc f r", "Telescope oldfiles" },
       { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
       { "  Bookmarks", "Spc m a", "Telescope marks" },
-      { "  Themes", "Spc t h", "Telescope themes" },
+      { "  Themes", "Spc k t", "Telescope themes" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
   },
