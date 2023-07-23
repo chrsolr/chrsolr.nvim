@@ -29,7 +29,7 @@ vim.keymap.set('n', '<C-k>', '{', { noremap = true, desc = 'Previous blankline' 
 
 -- Actions & Misc
 vim.keymap.set('n', '<leader>gg', '<cmd> LazyGit <CR>', { noremap = true, desc = 'Open LazyGit' })
-vim.keymap.set('n', '<leader>-og', '<cmd> GBrowse <CR>', { noremap = true, desc = 'Open in Github' })
+vim.keymap.set('n', '<leader>-ol', '<cmd> Lazy <CR>', { noremap = true, desc = 'Open Lazy' })
 vim.keymap.set('v', 'p', '"_dP', { noremap = true })
 -- vim.keymap.set('v', '<leader>/', 'gc', { noremap = true, desc = 'Comment Selected' })
 vim.keymap.set({ 'n', 'v' }, '<leader>fm', '<cmd> Format <CR>', { noremap = true })
