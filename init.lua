@@ -104,7 +104,8 @@ require('lazy').setup({
     config = function()
       require("tokyonight").setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-        style = "storm"
+        style = "night",
+        transparent = false,
       }
       vim.cmd.colorscheme 'tokyonight'
     end,
