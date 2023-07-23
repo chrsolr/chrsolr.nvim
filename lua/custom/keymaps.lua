@@ -31,7 +31,8 @@ vim.keymap.set('n', '<C-k>', '{', { noremap = true, desc = 'Previous blankline' 
 vim.keymap.set('n', '<leader>gg', '<cmd> LazyGit <CR>', { noremap = true, desc = 'Open LazyGit' })
 vim.keymap.set('n', '<leader>-ol', '<cmd> Lazy <CR>', { noremap = true, desc = 'Open Lazy' })
 vim.keymap.set('v', 'p', '"_dP', { noremap = true })
--- vim.keymap.set('v', '<leader>/', 'gc', { noremap = true, desc = 'Comment Selected' })
+-- vim.keymap.set('n', '<leader>/', 'gcc', { desc = 'Comment Line' })
+-- vim.keymap.set('v', '<leader>/', 'gc', { desc = 'Comment Selected' })
 vim.keymap.set({ 'n', 'v' }, '<leader>fm', '<cmd> Format <CR>', { noremap = true })
 vim.keymap.set({ 'n', 'v' }, '<leader>cf', '<cmd> EslintFixAll <CR>', { noremap = true })
 
@@ -49,11 +50,14 @@ vim.keymap.set('n', '<leader>-zt', function()
   print("spell global: " .. tostring(vim.o.spell))
 end, { noremap = true, desc = 'Toggle spell check (Global)' })
 
+
 -- Windows
 vim.keymap.set('n', '<leader>v', '<cmd> vsp <CR>', { noremap = true, desc = 'Split Vertical' })
 vim.keymap.set('n', '<leader>s', '<cmd> sp <CR>', { noremap = true, desc = 'Split Horizontal' })
 vim.keymap.set('n', '<leader>e', '<cmd> Neotree action=focus <CR>', { noremap = true, desc = 'Neotree Focus' })
 vim.keymap.set('n', '<C-n>', '<cmd> Neotree toggle <CR>', { noremap = true, desc = 'Neotree Toggle' })
+vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <CR>', { noremap = true, desc = 'Previous buffer' })
+vim.keymap.set('n', '<tab>', '<cmd> bnext <CR>', { noremap = true, desc = 'Next buffer' })
 
 
 -- Panes
@@ -99,20 +103,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-
---   n = {
---
---     -- Motions
---     ["<S-h>"] = { "<cmd> bprevious <CR>", "Previous buffer", opts = { nowait = true } },
---     ["<S-l>"] = { "<cmd> bnext <CR>", "Next buffer", opts = { nowait = true } },
---
---
---
---
---     -- Commands
---     ["<leader>ct"] = { "<cmd> TroubleToggle <CR>", "Trouble Toggle", opts = { nowait = true} },
---     ["<leader>gg"] = { "<cmd> LazyGit <CR>", "Open LazyGit", opts = { nowait = true} },
---
---
---
---
