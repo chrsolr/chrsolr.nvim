@@ -2,6 +2,10 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!--
 
+-- Indent
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
 
 -- Set line wrap
 vim.wo.wrap = false
