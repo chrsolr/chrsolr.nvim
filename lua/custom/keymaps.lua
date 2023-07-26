@@ -58,8 +58,9 @@ vim.keymap.set('n', '<leader>e', '<cmd> Neotree action=focus <CR>', { noremap = 
 vim.keymap.set('n', '<C-n>', '<cmd> Neotree toggle <CR>', { noremap = true, desc = 'Neotree Toggle' })
 vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <CR>', { noremap = true, desc = 'Previous buffer' })
 vim.keymap.set('n', '<tab>', '<cmd> bnext <CR>', { noremap = true, desc = 'Next buffer' })
-vim.keymap.set('n', '<leader>x', '<cmd> BufDel <CR>', { noremap = true, desc = 'Close buffer' })
-vim.keymap.set('n', '<leader>X', '<cmd> BufDelOthers <CR>', { noremap = true, desc = 'Close other buffer' })
+vim.keymap.set('n', '<leader>x', '<cmd> bd <CR>', { noremap = true, desc = 'Close buffer' })
+-- vim.keymap.set('n', '<leader>x', '<cmd> BufDel <CR>', { noremap = true, desc = 'Close buffer' })
+-- vim.keymap.set('n', '<leader>X', '<cmd> BufDelOthers <CR>', { noremap = true, desc = 'Close other buffer' })
 
 
 -- Panes
@@ -67,7 +68,6 @@ vim.keymap.set('n', '<leader>h', '<C-w>h', { noremap = true, desc = 'Move to lef
 vim.keymap.set('n', '<leader>j', '<C-w>j', { noremap = true, desc = 'Move to below pane' })
 vim.keymap.set('n', '<leader>k', '<C-w>k', { noremap = true, desc = 'Move to top pane' })
 vim.keymap.set('n', '<leader>l', '<C-w>l', { noremap = true, desc = 'Move to right pane' })
-vim.keymap.set('n', '<leader>q', '<C-w>q', { noremap = true, desc = 'Close pane' })
 
 
 -- Diagnostic keymaps
