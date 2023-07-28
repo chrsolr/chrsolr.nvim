@@ -25,6 +25,8 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true, desc = 'Scroll Down & 
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true, desc = 'Scroll Up & Center' })
 vim.keymap.set('n', '<C-j>', '}', { noremap = true, desc = 'Next blankline' })
 vim.keymap.set('n', '<C-k>', '{', { noremap = true, desc = 'Previous blankline' })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true, desc = 'Move line down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true, desc = 'Move line up' })
 
 
 -- Actions & Misc
