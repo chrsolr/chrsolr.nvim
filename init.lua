@@ -330,6 +330,7 @@ local servers = {
   tsserver = {},
   eslint = {},
   tailwindcss = {},
+  emmet_language_server = {},
 
   lua_ls = {
     Lua = {
