@@ -60,9 +60,9 @@ vim.keymap.set('n', '<leader>e', '<cmd> Neotree action=focus <CR>', { noremap = 
 vim.keymap.set('n', '<C-n>', '<cmd> Neotree toggle <CR>', { noremap = true, desc = 'Neotree Toggle' })
 vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <CR>', { noremap = true, desc = 'Previous buffer' })
 vim.keymap.set('n', '<tab>', '<cmd> bnext <CR>', { noremap = true, desc = 'Next buffer' })
-vim.keymap.set('n', '<leader>x', '<cmd> bd <CR>', { noremap = true, desc = 'Close buffer' })
--- vim.keymap.set('n', '<leader>x', '<cmd> BufDel <CR>', { noremap = true, desc = 'Close buffer' })
--- vim.keymap.set('n', '<leader>X', '<cmd> BufDelOthers <CR>', { noremap = true, desc = 'Close other buffer' })
+-- vim.keymap.set('n', '<leader>x', '<cmd> bd <CR>', { noremap = true, desc = 'Close buffer' })
+vim.keymap.set('n', '<leader>x', '<cmd> BufDel <CR>', { noremap = true, desc = 'Close buffer' })
+vim.keymap.set('n', '<leader>X', '<cmd> BufDelOthers <CR>', { noremap = true, desc = 'Close other buffer' })
 
 
 -- Panes
