@@ -18,6 +18,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Save File
 vim.keymap.set({ 'n', 'v', 'i' }, '<C-s>', '<ESC><cmd> w <CR>', { noremap = true })
 vim.keymap.set({ 'n', 'v', 'i' }, '<C-S>', '<ESC><cmd> wa <CR>', { noremap = true })
+vim.keymap.set('n', '<leader>ww', '<ESC><cmd> w <CR>', { noremap = true, desc = 'Save Files' })
 
 
 -- Navigation
