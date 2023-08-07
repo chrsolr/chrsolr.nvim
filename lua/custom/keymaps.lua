@@ -42,12 +42,12 @@ vim.keymap.set({ 'n', 'v' }, '<leader>cf', '<cmd> EslintFixAll <CR>', { noremap 
 
 
 -- Spell
-vim.keymap.set('n', '<leader>-za', 'zg', { noremap = true, desc = 'Previous blankline' })
+vim.keymap.set('n', '<leader>-za', 'zg', { noremap = true, desc = 'Add to Dictionary' })
 vim.keymap.set('n', '<leader>-zT', function()
   ---@diagnostic disable-next-line: param-type-mismatch
   vim.opt_local.spell = not (vim.opt_local.spell:get())
   print("spell local: " .. tostring(vim.o.spell))
-end, { noremap = true, desc = 'Toggle spell check (Global)' })
+end, { noremap = true, desc = 'Toggle spell check (Local)' })
 vim.keymap.set('n', '<leader>-zt', function()
   ---@diagnostic disable-next-line: param-type-mismatch
   vim.opt.spell = not (vim.opt.spell:get())
