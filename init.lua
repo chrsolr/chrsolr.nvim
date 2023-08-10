@@ -100,7 +100,7 @@ require('lazy').setup({
 
   {
     "folke/tokyonight.nvim",
-    priority = 1000,
+    priority = 3000,
     config = function()
       require("tokyonight").setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -108,6 +108,19 @@ require('lazy').setup({
         transparent = false,
       }
       vim.cmd.colorscheme 'tokyonight'
+    end,
+  },
+
+  {
+    "catppuccin/nvim",
+    priority = 1000,
+    config = function()
+      require("catppuccin").setup {
+        -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+        -- latte, frappe, macchiato, mocha
+        flavour = "mocha",
+      }
+      vim.cmd.colorscheme "catppuccin"
     end,
   },
 
@@ -414,4 +427,3 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
