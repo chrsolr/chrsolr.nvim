@@ -100,7 +100,7 @@ require('lazy').setup({
 
   {
     "folke/tokyonight.nvim",
-    priority = 3000,
+    priority = 1000,
     config = function()
       require("tokyonight").setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -113,12 +113,12 @@ require('lazy').setup({
 
   {
     "catppuccin/nvim",
-    priority = 1000,
+    priority = 3000,
     config = function()
       require("catppuccin").setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
         -- latte, frappe, macchiato, mocha
-        flavour = "mocha",
+        flavour = "macchiato",
       }
       vim.cmd.colorscheme "catppuccin"
     end,
