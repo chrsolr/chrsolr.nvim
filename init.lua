@@ -100,7 +100,7 @@ require('lazy').setup({
 
   {
     "folke/tokyonight.nvim",
-    priority = 1000,
+    priority = 1001,
     config = function()
       require("tokyonight").setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -121,6 +121,21 @@ require('lazy').setup({
         flavour = "macchiato",
       }
       vim.cmd.colorscheme "catppuccin"
+    end,
+  },
+
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    priority = 1000,
+    config = function()
+      require("rose-pine").setup {
+        --- @usage 'auto'|'main'|'moon'|'dawn'
+        variant = 'main',
+        --- @usage 'main'|'moon'|'dawn'
+        dark_variant = 'dawn',
+      }
+      vim.cmd.colorscheme("rose-pine")
     end,
   },
 
