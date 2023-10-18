@@ -92,7 +92,7 @@ require('lazy').setup({
   -- [[ Themes ]]
   {
     'navarasu/onedark.nvim',
-    priority = 2000,
+    priority = 1004,
     config = function()
       vim.cmd.colorscheme 'onedark'
     end,
@@ -100,7 +100,7 @@ require('lazy').setup({
 
   {
     "folke/tokyonight.nvim",
-    priority = 1001,
+    priority = 1000,
     config = function()
       require("tokyonight").setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -113,7 +113,7 @@ require('lazy').setup({
 
   {
     "catppuccin/nvim",
-    priority = 3000,
+    priority = 1001,
     config = function()
       require("catppuccin").setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -127,7 +127,7 @@ require('lazy').setup({
   {
     'rose-pine/neovim',
     name = 'rose-pine',
-    priority = 1000,
+    priority = 1002,
     config = function()
       require("rose-pine").setup {
         --- @usage 'auto'|'main'|'moon'|'dawn'
