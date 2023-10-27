@@ -7,6 +7,7 @@ pcall(require('telescope').load_extension, 'fzf')
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -25,8 +26,8 @@ vim.keymap.set('n', '<leader>ww', '<ESC><cmd> w <CR>', { noremap = true, desc = 
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true, desc = 'Scroll Down & Center' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true, desc = 'Scroll Up & Center' })
 vim.keymap.set('n', '<A-h>', '_', { noremap = true, desc = 'Start of Line' })
-vim.keymap.set('n', '<A-j>', '}', { noremap = true, desc = 'Next blankline' })
-vim.keymap.set('n', '<A-k>', '{', { noremap = true, desc = 'Previous blankline' })
+vim.keymap.set('n', '<A-j>', '}zz', { noremap = true, desc = 'Next blankline' })
+vim.keymap.set('n', '<A-k>', '{zz', { noremap = true, desc = 'Previous blankline' })
 vim.keymap.set('n', '<A-l>', '$', { noremap = true, desc = 'End of Line' })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true, desc = 'Move line down' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true, desc = 'Move line up' })
@@ -45,6 +46,7 @@ vim.keymap.set('n', '<leader>-zt', function()
   vim.opt.spell = not (vim.opt.spell:get())
   print("spell global: " .. tostring(vim.o.spell))
 end, { noremap = true, desc = 'Toggle spell check (Global)' })
+
 
 -- Actions & Misc
 vim.keymap.set('n', '<leader>gg', '<cmd> LazyGit <CR>', { noremap = true, desc = 'Open LazyGit' })
