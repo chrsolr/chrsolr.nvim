@@ -67,6 +67,10 @@ vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <CR>', { noremap = true, desc = 
 vim.keymap.set('n', '<tab>', '<cmd> bnext <CR>', { noremap = true, desc = 'Next buffer' })
 vim.keymap.set('n', '<leader>x', '<cmd> BufDel <CR>', { noremap = true, desc = 'Close buffer' })
 vim.keymap.set('n', '<leader>X', '<cmd> BufDelOthers <CR>', { noremap = true, desc = 'Close other buffer' })
+vim.keymap.set('n', '<C-Right>', '<cmd> vertical resize +5 <CR>', { noremap = true, desc = 'Increase vertical split' })
+vim.keymap.set('n', '<C-Left>', '<cmd> vertical resize -5 <CR>', { noremap = true, desc = 'Decrease vertical split' })
+vim.keymap.set('n', '<C-Up>', '<cmd> horizontal resize -5 <CR>', { noremap = true, desc = 'Decrease horizontal split' })
+vim.keymap.set('n', '<C-Down>', '<cmd> horizontal resize +5 <CR>', { noremap = true, desc = 'Increase horizontal split' })
 
 
 -- Panes
