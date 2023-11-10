@@ -170,7 +170,17 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim',         opts = {} },
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      toggler = {
+        line = "<leader>/"
+      },
+      opleader = {
+        line = "<leader>/"
+      }
+    }
+  },
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -344,8 +354,15 @@ local on_attach = function(_, bufnr)
 
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-    vim.lsp.buf.format()
-  end, { desc = 'Format current buffer with LSP' })
+    local conform = require("conform")
+    conform.format({
+      lsp_fallback = true,
+      async = false,
+      timeout_ms = 500
+    })
+
+    --    vim.lsp.buf.format()
+  end, { desc = 'Format current buffer with Conform or LSP' })
 end
 
 -- Enable the following language servers
