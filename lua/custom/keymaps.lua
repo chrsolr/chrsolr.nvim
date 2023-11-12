@@ -56,6 +56,8 @@ vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, { noremap = true, desc = 'LS
 vim.keymap.set('n', '<leader>ch', vim.lsp.buf.signature_help, { noremap = true, desc = 'LSP: Signature Help' })
 vim.keymap.set({ 'n', 'v' }, '<leader>fm', '<cmd> Format <CR>', { noremap = true })
 vim.keymap.set({ 'n', 'v' }, '<leader>cf', '<cmd> EslintFixAll <CR>', { noremap = true })
+vim.keymap.set('n', '<leader>tm', '<cmd> term <CR> i', { noremap = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
 
 
 -- Windows
