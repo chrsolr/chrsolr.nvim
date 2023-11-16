@@ -100,7 +100,7 @@ require('lazy').setup({
 
   {
     "folke/tokyonight.nvim",
-    priority = 1002,
+    priority = 1000,
     config = function()
       require("tokyonight").setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -113,7 +113,7 @@ require('lazy').setup({
 
   {
     "catppuccin/nvim",
-    priority = 1000,
+    priority = 1005,
     config = function()
       require("catppuccin").setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -147,9 +147,9 @@ require('lazy').setup({
       options = {
         icons_enabled = false,
         -- theme = 'onedark',
-        -- theme = 'tokyonight',
+        theme = 'tokyonight',
         -- theme = 'rose-pine',
-        theme = 'catppuccin',
+        -- theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
       },
