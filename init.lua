@@ -4,6 +4,16 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- vim.filetype.add({
+--   extension = {
+--     razor = 'html',
+--   }
+-- })
+--
+-- vim.treesitter.language.register("html", "razor")
+-- vim.treesitter.language.register("html", "cshtml")
+
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -252,7 +262,7 @@ require('telescope').setup {
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'lua', 'python', 'tsx', 'typescript', 'vimdoc', 'vim', 'c_sharp' },
+  ensure_installed = { 'html', 'lua', 'python', 'tsx', 'typescript', 'vimdoc', 'vim', 'c_sharp' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = true,
@@ -360,6 +370,7 @@ local on_attach = function(_, bufnr)
       timeout_ms = 500
     })
 
+
     --    vim.lsp.buf.format()
   end, { desc = 'Format current buffer with Conform or LSP' })
 end
@@ -389,6 +400,7 @@ local servers = {
     },
   },
 }
+
 
 -- Setup neovim lua configuration
 require('neodev').setup()
