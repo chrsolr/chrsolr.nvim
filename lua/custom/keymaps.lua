@@ -44,7 +44,7 @@ end, { noremap = true, desc = 'Toggle spell check (Global)' })
 -- Actions & Misc
 vim.keymap.set('n', '<leader>gg', '<cmd> LazyGit <CR>', { noremap = true, desc = 'Open LazyGit' })
 vim.keymap.set('n', '<leader>-ol', '<cmd> Lazy <CR>', { noremap = true, desc = 'Open Lazy' })
-vim.keymap.set('v', 'p', '"_dp', { noremap = true })
+vim.keymap.set('v', 'p', '"_dP', { noremap = true })
 vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, { noremap = true, desc = 'LSP: Hover' })
 vim.keymap.set('n', '<leader>ch', vim.lsp.buf.signature_help, { noremap = true, desc = 'LSP: Signature Help' })
 vim.keymap.set({ 'n', 'v' }, '<leader>fm', '<cmd> Format <CR>', { noremap = true })
