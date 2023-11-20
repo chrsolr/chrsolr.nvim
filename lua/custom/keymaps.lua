@@ -11,6 +11,10 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- [[ Personal Mappings ]]
+vim.keymap.set('n', '<leader>-vc', '<cmd> ConformInfo <CR>', { noremap = true, desc = 'Conform Info' })
+vim.keymap.set('n', '<leader>-vm', '<cmd> Mason <CR>', { noremap = true, desc = 'Open Mason' })
+vim.keymap.set('n', '<leader>-vl', '<cmd> Lazy <CR>', { noremap = true, desc = 'Open Lazy' })
+
 
 -- Save File
 vim.keymap.set({ 'n', 'v', 'i' }, '<C-s>', '<ESC><cmd> w <CR>', { noremap = true, desc = 'Save Files' })
