@@ -49,3 +49,6 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- Copilot
+vim.g.copilot_no_tab_map = true
