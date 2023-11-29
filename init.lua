@@ -391,7 +391,7 @@ local servers = {
   eslint = {},
   tailwindcss = {},
   emmet_language_server = {},
-  -- csharp_ls = {},
+  csharp_ls = {},
 
   lua_ls = {
     Lua = {
