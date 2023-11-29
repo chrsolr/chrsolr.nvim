@@ -13,7 +13,6 @@ vim.g.maplocalleader = ' '
 -- vim.treesitter.language.register("html", "razor")
 -- vim.treesitter.language.register("html", "cshtml")
 
-
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -109,12 +108,12 @@ require('lazy').setup({
   },
 
   {
-    "folke/tokyonight.nvim",
+    'folke/tokyonight.nvim',
     priority = 1000,
     config = function()
-      require("tokyonight").setup {
+      require('tokyonight').setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-        style = "night",
+        style = 'night',
         transparent = false,
       }
       vim.cmd.colorscheme 'tokyonight'
@@ -122,15 +121,15 @@ require('lazy').setup({
   },
 
   {
-    "catppuccin/nvim",
+    'catppuccin/nvim',
     priority = 1005,
     config = function()
-      require("catppuccin").setup {
+      require('catppuccin').setup {
         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
         -- latte, frappe, macchiato, mocha
-        flavour = "macchiato",
+        flavour = 'macchiato',
       }
-      vim.cmd.colorscheme "catppuccin"
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
 
@@ -139,13 +138,13 @@ require('lazy').setup({
     name = 'rose-pine',
     priority = 1001,
     config = function()
-      require("rose-pine").setup {
+      require('rose-pine').setup {
         --- @usage 'auto'|'main'|'moon'|'dawn'
         variant = 'main',
         --- @usage 'main'|'moon'|'dawn'
         dark_variant = 'dawn',
       }
-      vim.cmd.colorscheme("rose-pine")
+      vim.cmd.colorscheme 'rose-pine'
     end,
   },
 
@@ -172,7 +171,7 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     -- main = "ibl",
-    version = "2.20.8",
+    version = '2.20.8',
     opts = {
       char = '┊',
       show_trailing_blankline_indent = false,
@@ -184,12 +183,12 @@ require('lazy').setup({
     'numToStr/Comment.nvim',
     opts = {
       toggler = {
-        line = "<leader>/"
+        line = '<leader>/',
       },
       opleader = {
-        line = "<leader>/"
-      }
-    }
+        line = '<leader>/',
+      },
+    },
   },
 
   -- Fuzzy Finder (files, lsp, etc)
@@ -235,14 +234,12 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
-require('custom.options')
-
+require 'custom.options'
 
 -- [[ Basic Keymaps ]]
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
-require('custom.keymaps')
-
+require 'custom.keymaps'
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
@@ -256,7 +253,6 @@ require('telescope').setup {
     },
   },
 }
-
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -324,7 +320,6 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
-
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -352,7 +347,6 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, 'Document Symbols')
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Workspace Symbols')
 
-
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, 'Goto Declaration')
   nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, 'Workspace Add Folder')
@@ -363,13 +357,12 @@ local on_attach = function(_, bufnr)
 
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-    local conform = require("conform")
-    conform.format({
+    local conform = require 'conform'
+    conform.format {
       lsp_fallback = true,
       async = false,
-      timeout_ms = 500
-    })
-
+      timeout_ms = 500,
+    }
 
     --    vim.lsp.buf.format()
   end, { desc = 'Format current buffer with Conform or LSP' })
@@ -400,7 +393,6 @@ local servers = {
     },
   },
 }
-
 
 -- Setup neovim lua configuration
 require('neodev').setup()
@@ -449,7 +441,7 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = cmp.mapping(function(fallback)
+    ['<C-n>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_locally_jumpable() then
@@ -458,7 +450,7 @@ cmp.setup {
         fallback()
       end
     end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
+    ['C-p>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       elseif luasnip.locally_jumpable(-1) then
