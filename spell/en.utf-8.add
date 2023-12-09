@@ -43,3 +43,7 @@ contractId
 enum
 json
 oneOf
+JSend
+github
+jsend
+desc
