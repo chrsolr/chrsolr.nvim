@@ -369,10 +369,10 @@ local on_attach = function(_, bufnr)
 end
 
 -- Enable the following language servers
---  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
+-- Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 --
---  Add any additional override configuration in the following tables. They will be passed to
---  the `settings` field of the server config. You must look up that documentation yourself.
+-- Add any additional override configuration in the following tables. They will be passed to
+-- the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
   -- clangd = {},
   -- gopls = {},
@@ -431,7 +431,7 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping.preset.insert {
-    ['<C-n>'] = cmp.mapping.select_next_item(),
+    -- ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),

@@ -12,7 +12,8 @@ return {
       javascript = { { "eslint_d" } },
       typescript = { { "eslint_d" } },
       javascriptreact = { { "eslint_d" } },
-      typescriptreact = { { "eslint_d" } }
+      typescriptreact = { { "eslint_d" } },
+      c_sharp = { { "dotnet", "format" } },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", {
