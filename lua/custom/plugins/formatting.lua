@@ -20,7 +20,7 @@ return {
         yaml = { "prettierd" },
         markdown = { "prettierd" },
         lua = { "stylua" },
-        -- csharp = { "csharpier" },
+        csharp = { "csharpier" },
       },
       format_on_save = {
         lsp_fallback = true,
